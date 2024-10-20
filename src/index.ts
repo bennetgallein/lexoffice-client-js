@@ -12,29 +12,29 @@ import { PaymentConditionClient } from './paymentCondition/paymentCondition.clie
 import { ProfileClient } from './profile/profile.client';
 import { QuotationClient } from './quotation/quotation.client';
 import { RecurringTemplateClient } from './recurringTemplate/recurringTemplate.client';
-import { VoucherlistClient } from './voucherList/voucherList.client';
+import { VoucherlistClient } from './voucherlist/voucherlist.client';
 import { VoucherClient } from './voucher/voucher.client';
 import { FileClient } from './file/file.client';
 import { PostingCategoryClient } from './postingCategory/postingCategory.client';
 
-class Client extends BaseClient {}
+class Client extends BaseClient { }
 interface Client
   extends InvoiceClient,
-    ContactsClient,
-    CountryClient,
-    CreditNoteClient,
-    DownPaymentInvoiceClient,
-    EventSubscriptionClient,
-    OrderConfirmationClient,
-    PaymentClient,
-    PaymentConditionClient,
-    ProfileClient,
-    QuotationClient,
-    RecurringTemplateClient,
-    VoucherlistClient,
-    VoucherClient,
-    FileClient,
-    PostingCategoryClient {}
+  ContactsClient,
+  CountryClient,
+  CreditNoteClient,
+  DownPaymentInvoiceClient,
+  EventSubscriptionClient,
+  OrderConfirmationClient,
+  PaymentClient,
+  PaymentConditionClient,
+  ProfileClient,
+  QuotationClient,
+  RecurringTemplateClient,
+  VoucherlistClient,
+  VoucherClient,
+  FileClient,
+  PostingCategoryClient { }
 applyMixins(Client, [
   InvoiceClient,
   ContactsClient,
@@ -69,7 +69,7 @@ export * from './paymentCondition/paymentCondition.type';
 export * from './profile/profile.type';
 export * from './quotation/quotation.type';
 export * from './recurringTemplate/recurringTemplate.type';
-export * from './voucherList/voucherList.type';
+export * from './voucherlist/voucherlist.type';
 export * from './voucher/voucher.type';
 export * from './file/file.type';
 export * from './postingCategory/postingCategory.type';
