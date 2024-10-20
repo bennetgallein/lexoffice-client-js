@@ -10,6 +10,7 @@ import {
 } from './invoice-dto.type';
 import { OptionalFinalized } from './invoice.type';
 import uri from 'uri-tag';
+import { DeliveryNote } from './delivery-note.type';
 
 export class InvoiceClient extends BaseClient {
   async createInvoice(
@@ -40,5 +41,12 @@ export class InvoiceClient extends BaseClient {
       .catch((error) => {
         return Err(handleRequestError(error));
       });
+  }
+
+  async pursueDeliveryNote(id: string, deliveryNote: DeliveryNote): Promise<Result<DeliveryNote, RequestError>> {
+    return this.axios
+      .post(uri`/delivery-notes`, deliveryNote, { params: { precedingSalesVoucherId: id } })
+      .then(result => Ok(result.data))
+      .catch(error => Err(handleRequestError(error)))
   }
 }
