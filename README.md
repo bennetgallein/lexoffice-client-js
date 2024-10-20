@@ -9,26 +9,26 @@
 <p align="center"><strong>❌ non throwing</strong></p>
 <br>
 <p align="center">
-  <a href="https://github.com/elbstack/lexoffice-client-js">
+  <a href="https://github.com/bennetgallein/lexoffice-client-js">
     <img src="https://badgen.net/badge/-/github?icon=github&label alt="GitHub" />
   </a>
-  <a href="https://github.com/elbstack/lexoffice-client-js/stargazers">
-    <img src="https://badgen.net/github/stars/elbstack/lexoffice-client-js" alt="GitHub Stars"/>
+  <a href="https://github.com/bennetgallein/lexoffice-client-js/stargazers">
+    <img src="https://badgen.net/github/stars/bennetgallein/lexoffice-client-js" alt="GitHub Stars"/>
   </a>
     <a>
-    <img alt="npm (latest)" src="https://img.shields.io/npm/v/@elbstack/lexoffice-client-js/latest?color=%23f73149"/>
+    <img alt="npm (latest)" src="https://img.shields.io/npm/v/@bennetgallein/lexoffice-client-js/latest?color=%23f73149"/>
   </a>
   <a>
-    <img alt="npm (next)" src="https://img.shields.io/npm/v/@elbstack/lexoffice-client-js/next?color=%23e044aa"/>
+    <img alt="npm (next)" src="https://img.shields.io/npm/v/@bennetgallein/lexoffice-client-js/next?color=%23e044aa"/>
   </a>
     <br>
-  <a href="https://github.com/elbstack/lexoffice-client-js/pulse" >
-    <img src="https://img.shields.io/github/commit-activity/m/elbstack/lexoffice-client-js?color=%23329121" alt="Activity" />        
+  <a href="https://github.com/bennetgallein/lexoffice-client-js/pulse" >
+    <img src="https://img.shields.io/github/commit-activity/m/bennetgallein/lexoffice-client-js?color=%23329121" alt="Activity" />        
   </a>
-  <a href="https://github.com/elbstack/lexoffice-client-js/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/elbstack/lexoffice-client-js?color=%2345e6db" alt="Contributors" />
+  <a href="https://github.com/bennetgallein/lexoffice-client-js/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/bennetgallein/lexoffice-client-js?color=%2345e6db" alt="Contributors" />
   </a>
-  <a href="https://github.com/elbstack/lexoffice-client-js/blob/main/LICENSE">
+  <a href="https://github.com/bennetgallein/lexoffice-client-js/blob/main/LICENSE">
     <img
       src="https://badgen.net/badge/license/MIT/blue"
       alt="MIT license"
@@ -38,15 +38,11 @@
 
 ## 📦 Contents
 
-- [⚙️ Installation](#installation)
-- [📚 Documentation](#documentation)
-- [🔑 Usage](#usage)
-- [💡 Examples](#examples)
+- [📦 Contents](#-contents)
   - [Retrieve an invoice](#retrieve-an-invoice)
   - [Create an invoice](#create-an-invoice)
-  - [Upload file](#upload-file)
-- [❌ Error handling](#error-handling)
-- [🛠 Provided methods grouped by endpoint](#provided-methods)
+  - [Upload File](#upload-file)
+  - [Error codes and types](#error-codes-and-types)
   - [Contact](#contact)
   - [Country](#country)
   - [Credit note](#credit-note)
@@ -60,10 +56,13 @@
   - [Posting category](#posting-category)
   - [Profile](#profile)
   - [Quotation](#quotation)
-  - [Recurring Template](#recurring-template)
+  - [Recurring template](#recurring-template)
   - [Voucher](#voucher)
   - [Voucherlist](#voucherlist)
-- [🔖 Side notes](#side-notes)
+  - [Updating](#updating)
+  - [Rendering Document File Id](#rendering-document-file-id)
+  - [Download File](#download-file)
+  - [👩🏻‍💻👨🏽‍💻 We are hiring!](#-we-are-hiring)
 <ul><li><a href="#about"><img src="/images/favicon-32x32.png"width="20" height="20"/> About us</a></li></ul>
 
 ---
@@ -71,13 +70,13 @@
 <h2 name="installation" >⚙️ Installation</h2>
 
 ```bash
-npm install @elbstack/lexoffice-client-js
+npm install @bennetgallein/lexoffice-client-js
 ```
 
 or
 
 ```bash
-yarn add @elbstack/lexoffice-client-js
+yarn add @bennetgallein/lexoffice-client-js
 ```
 
 <h2 name="documentation">📚 Documentation</h2>
@@ -89,7 +88,7 @@ You can find the official lexoffice API documentation [here](https://developers.
 To get your API Key, you must already be a lexoffice user. Get it [here](https://app.lexoffice.de/settings/#/public-api).
 
 ```ts
-import { Client } from '@elbstack/lexoffice-client-js';
+import { Client } from '@bennetgallein/lexoffice-client-js';
 
 const client = new Client(YOUR_LEXOFFICE_API_KEY);
 ```
